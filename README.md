@@ -20,19 +20,25 @@ Referencia: [configuración oficial de proyectos estáticos en Vercel](https://v
 
 ## Qué incluye
 
-- **Unidad 1, comandos:** 63 tarjetas, incluidas 51 de la materia central y 12 extras de VLAN y diagnóstico. Modos Elegir, Escribir, ¿Qué equipo?, Tarjetas, Protocolos, Terminal guiado y Biblioteca.
-- **22 preguntas** sobre protocolos, puertos, servicios y diagnóstico.
-- **5 secuencias guiadas por caso:** interfaces de R1, administración del switch, SSH, seguridad básica y diagnóstico. Están disponibles tanto para TecnoRed como para LogiSur.
-- **Unidad 2, subredes:** calculadora IPv4, asignación VLSM, ejercicios y tablas de direccionamiento de ambos casos.
+- **Unidad 1, comandos:** 47 tarjetas con funciones tratadas en los PDF. Modos Elegir, Escribir, ¿Qué equipo?, Tarjetas, Protocolos, Terminal guiado y Biblioteca.
+- **20 preguntas breves** sobre protocolos, puertos, servicios y diagnóstico de los PDF.
+- **5 secuencias guiadas de TecnoRed:** interfaces de R1, administración del switch, SSH, seguridad básica y diagnóstico.
+- **Unidad 2, subredes:** calculadora IPv4, asignación VLSM, ejercicios y direccionamiento del caso TecnoRed.
+- **Sección Conceptos:** las 11 preguntas de análisis de la guía, con espacio para explicar, respuesta de referencia de la pauta, tres ideas clave, ejemplo y autoevaluación. Puedes marcar las que necesitas repasar.
+- **Tema oscuro, claro o del sistema**, con la preferencia guardada. La primera visita comienza en modo oscuro.
 - Progreso automático en el navegador, exportación e importación de estados JSON, restablecimiento y botones para deshacer y rehacer.
 
 Las rondas tienen hasta 10 preguntas. Se priorizan las tarjetas con menor nivel y los errores pendientes. Una tarjeta se considera dominada después de 3 aciertos seguidos. Un error reinicia su nivel. En Tarjetas, la evaluación es personal. Mostrar la solución en el terminal cuenta como ayuda y ese paso no suma un acierto de memoria.
+
+En Conceptos la respuesta escrita no se califica automáticamente: compárala con la pauta y marca si pudiste explicarla o necesitas repasarla. El borrador, la pregunta actual y esa evaluación se guardan con tu progreso.
+
+En teléfonos se utilizan controles táctiles de al menos 44 píxeles en las acciones principales y campos de escritura de 16 píxeles para evitar el zoom automático de iOS. La barra inferior se oculta mientras escribes y vuelve al terminar.
 
 ## Guardar y recuperar avance
 
 El progreso pertenece al navegador y al origen de la página. No se sincroniza entre dispositivos. El avance al abrir el archivo local y el avance de la página publicada se almacenan por separado.
 
-- **Guardar estado:** descarga un archivo JSON con el progreso, filtros, ronda y posición en las secuencias.
+- **Guardar:** descarga un archivo JSON con el progreso, filtros, ronda, posición en las secuencias, tema y respuestas conceptuales.
 - **Cargar:** restaura un archivo de estado, también en otro dispositivo.
 - **Restablecer:** comienza de cero, tras una confirmación.
 - **↶ / ↷:** deshace o rehace hasta 40 cambios de la sesión actual. El historial de estos botones no se conserva al recargar ni se incluye en las copias.
@@ -45,9 +51,12 @@ Fuentes proporcionadas:
 
 - `Actividad Repaso - Certamen 2 - PAUTA DOCENTE.pdf`: solución de referencia TecnoRed.
 - `Actividad Repaso - Certamen 2.pdf`: guía del estudiante.
-- `Actividad_Repaso_Certamen2_Casa.docx`: caso LogiSur, sin soluciones. Sus tablas se calcularon a partir de los requisitos.
 
-Las guías utilizan tres LAN conectadas directamente a un router 2911 y switches 2960. Solo requieren VLAN 1 para administración; las VLAN adicionales y los troncales están identificados como extras. No se agregan rutas estáticas a estos casos.
+El contenido académico se limita a esos dos PDF. Se retiraron las ampliaciones de comandos y el caso del documento Word. Las guías utilizan tres LAN conectadas directamente a un router 2911 y switches 2960, con VLAN 1 para administración. No se incluyen prácticas de VLAN adicionales, enlaces troncales ni rutas estáticas.
+
+Las preguntas de Conceptos corresponden a las preguntas 1 a 11 del PDF del estudiante. Sus respuestas resumen la pauta docente y utilizan ejemplos del mismo caso. Las contraseñas, los textos y los nombres de archivos de los comandos son valores de práctica; las funciones son las tratadas en los PDF.
+
+Las copias anteriores siguen siendo compatibles: se conserva el progreso de las tarjetas vigentes y se descartan las tarjetas o casos retirados. Si una ronda antigua contiene opciones de comandos retirados, se inicia una ronda actualizada.
 
 El terminal guiado es una práctica de sintaxis por pasos. No es un emulador IOS y no verifica una topología real. Los comandos admitidos y los nombres de interfaz pueden variar por imagen y modelo de Packet Tracer. Se aceptan las abreviaciones y equivalencias documentadas en la biblioteca; no todas las abreviaciones posibles de IOS.
 
@@ -60,12 +69,14 @@ Referencias adicionales:
 
 ## Verificación realizada
 
-Se probaron en Microsoft Edge las respuestas, las equivalencias de comandos, los diez recorridos guiados (cinco por caso), el guardado y la carga, los archivos inválidos, el historial y el cálculo de subredes, incluidos /0, /31 y /32. Se revisó que las vistas no desborden horizontalmente a 320, 390, 768 y 1440 píxeles de ancho.
+Se probaron en Microsoft Edge las respuestas, los cinco recorridos guiados, los once ejercicios conceptuales, los borradores, la autoevaluación, el repaso, el guardado, la carga, el historial y la migración del progreso anterior. Se verificaron los modos oscuro, claro y del sistema. Las vistas se revisaron a 320, 375, 390, 430, 667, 768 y 1440 píxeles, incluidos orientación horizontal y ambos temas.
+
+También se probaron perfiles táctiles de iPhone 13 y Pixel 7 mediante emulación en Chromium. Esa emulación comprueba tamaños, interacción y comportamiento adaptable; no equivale a una prueba física en Safari de iOS o en un teléfono Android.
 
 El diseño es adaptable y utiliza funciones web estándar de navegadores modernos. No se realizó una prueba física en Android o iPhone ni un despliegue en tu cuenta de Vercel.
 
 ## Modificar la página
 
-Todo está en `index.html`: primero los estilos, luego los datos de las tarjetas (`CARDS`, `CONCEPTS`, `SCENARIOS`) y finalmente la lógica. Puedes editarlo y subir los cambios a GitHub para que Vercel los publique.
+Todo está en `index.html`: primero los estilos, luego los datos (`CARDS`, `CONCEPTS`, `SCENARIOS` y `THEORY`) y finalmente la lógica. Puedes editarlo y subir los cambios a GitHub para que Vercel los publique.
 
 Proyecto de estudio independiente, sin afiliación con Cisco.
