@@ -25,7 +25,7 @@ Referencia: [configuración oficial de proyectos estáticos en Vercel](https://v
 - **5 secuencias guiadas de TecnoRed:** interfaces de R1, administración del switch, SSH, seguridad básica y diagnóstico.
 - **Unidad 2, subredes:** calculadora IPv4, asignación VLSM, ejercicios y direccionamiento del caso TecnoRed.
 - **Sección Conceptos:** las 11 preguntas de análisis de la guía, con espacio para explicar, respuesta de referencia de la pauta, tres ideas clave, ejemplo y autoevaluación. Puedes marcar las que necesitas repasar.
-- **Tema oscuro, claro o del sistema**, con la preferencia guardada. La primera visita comienza en modo oscuro.
+- **Tres temas: Claro, Oscuro y AMOLED**, con la preferencia guardada. Oscuro conserva la paleta verde anterior; AMOLED utiliza negro puro (`#000000`) en el fondo, los paneles, los campos y la barra inferior, con texto blanco o gris claro y acentos suaves para distinguir acciones. La primera visita comienza en Oscuro.
 - Progreso automático en el navegador, exportación e importación de estados JSON, restablecimiento y botones para deshacer y rehacer.
 
 Las rondas tienen hasta 10 preguntas. Se priorizan las tarjetas con menor nivel y los errores pendientes. Una tarjeta se considera dominada después de 3 aciertos seguidos. Un error reinicia su nivel. En Tarjetas, la evaluación es personal. Mostrar la solución en el terminal cuenta como ayuda y ese paso no suma un acierto de memoria.
@@ -69,7 +69,7 @@ Referencias adicionales:
 
 ## Verificación realizada
 
-Se probaron en Microsoft Edge las respuestas, los cinco recorridos guiados, los once ejercicios conceptuales, los borradores, la autoevaluación, el repaso, el guardado, la carga, el historial y la migración del progreso anterior. Se verificaron los modos oscuro, claro y del sistema. Las vistas se revisaron a 320, 375, 390, 430, 667, 768 y 1440 píxeles, incluidos orientación horizontal y ambos temas.
+Se probaron en Microsoft Edge las respuestas, los cinco recorridos guiados, los once ejercicios conceptuales, los borradores, la autoevaluación, el repaso, el guardado, la carga, el historial y la migración del progreso anterior. Las vistas se revisaron a 320, 375, 390, 430, 667, 768 y 1440 píxeles. El tema AMOLED se comprobó aparte en computador y móvil: negro puro en las superficies principales, contraste del texto, persistencia al recargar y carga de estados guardados.
 
 También se probaron perfiles táctiles de iPhone 13 y Pixel 7 mediante emulación en Chromium. Esa emulación comprueba tamaños, interacción y comportamiento adaptable; no equivale a una prueba física en Safari de iOS o en un teléfono Android.
 
